@@ -50,7 +50,7 @@ class PullRequestSchema(BaseModel):
             id=obj['id'],
             number=obj['number'],
             title=obj['title'],
-            body=obj['body'],
+            body=obj['body'] if obj['body'] else '',
             merged_at=obj['merged_at'],
             state=obj['state'],
             user=pr_user,
