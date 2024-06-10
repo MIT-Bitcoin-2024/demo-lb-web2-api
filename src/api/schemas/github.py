@@ -34,7 +34,7 @@ class PullRequestSchema(BaseModel):
     id: int
     number: int
     title: str
-    body: str | None = Field('')
+    body: str = Field('')
     merged_at: str | None = Field(None)
     state: str
     user: GithubUserSchema
